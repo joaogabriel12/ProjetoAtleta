@@ -26,5 +26,28 @@ namespace ProjetoAtleta
         {
 
         }
+        Atleta obj = new Atleta();
+        private void btncalcularimc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                obj.Nome = txtnome.Text;
+                obj.Altura= double.Parse(txtaltura.Text);
+             
+                obj.Peso = double.Parse(txtpeso.Text);
+                obj.Idade = int.Parse(txtidade.Text);
+                MessageBox.Show(""+obj.Calcularimc());
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("nos campos peso,altura e idade recebem apenas numeros");
+            }
+            catch (DivideByZeroException)
+            {
+                MessageBox.Show("Preencha com numeros maiores que 0");
+            }
+           
+
+        }
     }
 }

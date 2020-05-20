@@ -56,6 +56,7 @@
             this.btncalcularimc.TabIndex = 1;
             this.btncalcularimc.Text = "Calcular IMC";
             this.btncalcularimc.UseVisualStyleBackColor = true;
+            this.btncalcularimc.Click += new System.EventHandler(this.btncalcularimc_Click);
             // 
             // txtnome
             // 
